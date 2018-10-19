@@ -20,9 +20,9 @@ namespace OCA\diskM\AppInfo;
 });
 
 
-use OCA\diskM\Hooks;
+use OCA\diskM\DiskHooks;
 $app = new Application();
-$app->getContainer()->query(Hooks::class)->register();
+$app->getContainer()->query(DiskHooks::class)->register();
 //\OCP\Util::connectHook('OC_User', 'pre_deleteUser', 'OCA\MyApp\Hooks\User', 'preLogin');
 
 ?>
