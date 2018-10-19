@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<info>
+    <id>disk_manager</id>
+    <name>Disk Manager</name>
+    <description>Use a C daemon to manage disk power</description>
+    <licence>AGPL</licence>
+    <author>François Gauthier-Clerc</author>
+    <version>0.0.1</version>
+    <namespace>diskM</namespace>
+    <category>DiskManager</category>
+    <dependencies>
+        <owncloud min-version="9" max-version="11" />
+    </dependencies>
+</info>
