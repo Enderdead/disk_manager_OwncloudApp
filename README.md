@@ -1,4 +1,1 @@
 # disk_manager_OwncloudApp
-
-My error : 
-{"reqId":"QVq02y8HeVU0Bt5B29b1","level":3,"time":"2018-10-19T12:22:52+00:00","remoteAddr":"10.8.0.1","user":"francois","app":"index","method":"GET","url":"\/index.php\/apps\/files","message":"Exception: {\"Exception\":\"Error\",\"Message\":\"Class 'OCA\\\\diskM\\\\AppInfo\\\\Application' not found\",\"Code\":0,\"Trace\":\"#0 \\\/var\\\/www\\\/owncloud\\\/lib\\\/private\\\/legacy\\\/app.php(242): require_once()\\n#1 \\\/var\\\/www\\\/owncloud\\\/lib\\\/private\\\/legacy\\\/app.php(193): OC_App::requireAppFile('disk_manager')\\n#2 \\\/var\\\/www\\\/owncloud\\\/lib\\\/private\\\/legacy\\\/app.php(127): OC_App::loadApp('disk_manager')\\n#3 \\\/var\\\/www\\\/owncloud\\\/lib\\\/base.php(895): OC_App::loadApps()\\n#4 \\\/var\\\/www\\\/owncloud\\\/index.php(54): OC::handleRequest()\\n#5 {main}\",\"File\":\"\\\/var\\\/www\\\/owncloud\\\/apps\\\/disk_manager\\\/appinfo\\\/app.php\",\"Line\":24}"}
