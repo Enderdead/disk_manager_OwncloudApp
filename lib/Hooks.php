@@ -9,11 +9,10 @@ class Hooks {
     public function __construct(IUserManager $usermanager){
         $this->userManager = $usermanager;
     }
-
     public function register() {
         $callback = function($user, $password) {
             //$socket = socket_create(AF_UNIX, SOCK_STREAM, 0);
-            //$res = socket_connect($socket, "/tmp/disk.sock");
+            //$res = sosket_connect($socket, "/tmp/disk.sock");
             //socket_recv($socket, $resultat, 1, 0);
             //socket_close($socket);
             $file = "/home/pi/log.txt";
@@ -27,6 +26,5 @@ class Hooks {
         };
         $this->userManager->listen('\OC\User', 'preLogin', $callback);
     }
-
 }
 ?>
