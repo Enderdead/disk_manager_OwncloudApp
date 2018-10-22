@@ -1,18 +1,19 @@
 <?php
 namespace OCA\diskM;
-use OCP\IUserManager;
+use \OCP\Files\Node;
 
-class Hooks {
+class Hooks{
 
-    private $userManager;
+    private $root_node;
 
-    public function __construct(IUserManager $usermanager){
-        $this->userManager = $usermanager;
+    public function __construct(Node $root_node){
+        $this->root_node = $root_node;
     }
+
     public function register() {
-        $callback = function($user, $password) {
+        $callback = function($user) {
             //$socket = socket_create(AF_UNIX, SOCK_STREAM, 0);
-            //$res = sosket_connect($socket, "/tmp/disk.sock");
+            //$res = socket_connect($socket, "/tmp/disk.sock");
             //socket_recv($socket, $resultat, 1, 0);
             //socket_close($socket);
             $file = "/home/pi/log.txt";
@@ -24,7 +25,8 @@ class Hooks {
             file_put_contents($file, $current);
             // your code that executes before $user is deleted
         };
-        $this->userManager->listen('\OC\User', 'preLogin', $callback);
+        $this->root_node->listen('\OC\Files', 'preWrite', $callback);
     }
+
 }
 ?>

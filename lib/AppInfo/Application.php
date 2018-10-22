@@ -11,7 +11,7 @@ class Application extends App {
         $container = $this->getContainer();
         $container->registerService('hooks', function($c) {
             return new Hooks(
-                $c->query('ServerContainer')->getUserManager()
+                $c->query('ServerContainer')->getRootFolder()
             );
         });
     }
