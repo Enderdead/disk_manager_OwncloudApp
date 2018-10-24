@@ -11,7 +11,7 @@ class Hooks{
     }
 
     public function register() {
-        $callback = function($user) {
+        $callback = function($node) {
             //$socket = socket_create(AF_UNIX, SOCK_STREAM, 0);
             //$res = socket_connect($socket, "/tmp/disk.sock");
             //socket_recv($socket, $resultat, 1, 0);
