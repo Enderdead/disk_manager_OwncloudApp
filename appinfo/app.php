@@ -1,6 +1,5 @@
 <?php
 namespace OCA\diskM\AppInfo;
-use OCA\diskM\Hooks;
 
 \OC::$server->getNavigationManager()->add(function () {
     $urlGenerator = \OC::$server->getURLGenerator();
@@ -20,7 +19,7 @@ use OCA\diskM\Hooks;
 });
 
 $app = new Application();
-$app->getContainer()->query("hooks")->register();
+$app->getContainer()->query("Hooks")->register();
 //\OCP\Util::connectHook('OC_User', 'pre_deleteUser', 'OCA\MyApp\Hooks\User', 'preLogin');
 
 ?>
